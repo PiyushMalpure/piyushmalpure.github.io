@@ -719,6 +719,7 @@
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Work</a>
+          <a href="#patents">Patents</a>
           <a href="#publications">Research</a>
         </div>
 
@@ -747,7 +748,7 @@
     <div class="social-row">
       <a href="https://github.com/PiyushMalpure" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/piyushmalpure07" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://scholar.google.com/citations?user=YOUR_PROFILE_ID" target="_blank"><i
+      <a href="https://scholar.google.com/citations?user=Sq1FbgkAAAAJ&hl=en" target="_blank"><i
           class="fas fa-graduation-cap"></i></a>
     </div>
   </header>
@@ -837,6 +838,40 @@
 
       <div class="project-grid">
 
+        <div class="project-card" data-tags="python,planning,robotics" data-project-id="centralized-motion-planner">
+          <div class="project-media loading"></div>
+          <div class="project-top">
+            <i class="far fa-folder folder-icon"></i>
+            <a href="https://github.com/RushiPDeshmukh/Centralized_Motion_Planner_Project" class="github-link"
+              target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+          <h3>Centralized Motion Planner</h3>
+          <p>Centralized motion planning logic (A*, RRT*) for autonomous multi-robot systems handling 100+
+            robots/minute.</p>
+          <div class="tech-stack">
+            <span>A*</span>
+            <span>RRT*</span>
+            <span>Python</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-tags="python,ai" data-project-id="ppo-dqn-carracing">
+          <div class="project-media loading"></div>
+          <div class="project-top">
+            <i class="far fa-folder folder-icon"></i>
+            <a href="https://github.com/PiyushMalpure/PPO_DQN_CarRacing" class="github-link" target="_blank"><i
+                class="fab fa-github"></i></a>
+          </div>
+          <h3>PPO & DQN for Car Racing</h3>
+          <p>Comparison of PPO and DQN reinforcement learning algorithms on continuous vs discrete action spaces. PPO
+            achieved 217.38 average reward vs 92 for DQN.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>Reinforcement Learning</span>
+            <span>OpenAI Gym</span>
+          </div>
+        </div>
+
         <div class="project-card" data-tags="cpp,robotics" data-project-id="bimodal-quadruped">
           <div class="project-media loading"></div>
           <div class="project-top">
@@ -854,7 +889,7 @@
           </div>
         </div>
 
-        <div class="project-card" data-tags="python,ai" data-project-id="multi-robot-task">
+        <div class="project-card" data-tags="python,ai, robotics" data-project-id="multi-robot-task">
           <div class="project-media loading"></div>
           <div class="project-top">
             <i class="far fa-folder folder-icon"></i>
@@ -871,40 +906,53 @@
           </div>
         </div>
 
-        <div class="project-card" data-tags="python,planning" data-project-id="motion-planner">
+        <div class="project-card" data-tags="cpp,python,robotics" data-project-id="mobile-robot-ros">
           <div class="project-media loading"></div>
           <div class="project-top">
             <i class="far fa-folder folder-icon"></i>
-            <a href="https://github.com/PiyushMalpure" class="github-link" target="_blank"><i
-                class="fab fa-github"></i></a>
+            <a href="https://github.com/hiro-wpi/Mobile_Robot_ROS_Control_Interfaces" class="github-link"
+              target="_blank"><i class="fab fa-github"></i></a>
           </div>
-          <h3>Centralized Motion Planner</h3>
-          <p>Centralized motion planning logic (A*, RRT*) for autonomous multi-robot systems handling 100+
-            robots/minute.</p>
+          <h3>Mobile Robot ROS Control Interfaces</h3>
+          <p>ROS teleoperation interfaces for mobile robot control. Supports multiple input devices: keyboard, joystick,
+            G29 steering wheel, and Novint Falcon haptic controller.</p>
           <div class="tech-stack">
-            <span>A*</span>
-            <span>RRT*</span>
-            <span>Python</span>
+            <span>ROS</span>
+            <span>C++</span>
+            <span>Teleoperation</span>
           </div>
         </div>
 
-        <div class="project-card" style="border-color: var(--accent);" data-project-id="patent-movement">
-          <div class="project-media loading"></div>
-          <div class="project-top">
-            <i class="fas fa-certificate folder-icon"></i>
-            <a href="https://patents.google.com/patent/WO2024044221A2" class="github-link" target="_blank"><i
-                class="fas fa-external-link-alt"></i></a>
-          </div>
-          <h3>Patent: Multi-Dimensional Movement</h3>
-          <p>Co-inventor of methods for movement of rectangular prisms through multi-dimensional space. (WO2024044221A2)
-          </p>
-          <div class="tech-stack">
-            <span>Patent</span>
-            <span>Robotics</span>
-            <span>2024</span>
-          </div>
-        </div>
+      </div>
+    </section>
 
+    <section id="patents">
+      <h2 class="section-title">Patents</h2>
+
+      <div class="patent-item"
+        style="background: var(--bg-card); border: 1px solid var(--accent); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow);">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+          <div style="flex-grow: 1;">
+            <h3 style="margin: 0 0 0.5rem 0; font-size: 1.25rem; color: var(--text-main);">Multi-Dimensional Movement
+            </h3>
+            <p style="margin: 0 0 1rem 0; color: var(--text-muted); font-size: 0.95rem;">Co-inventor of methods for
+              movement of rectangular prisms through multi-dimensional space.</p>
+            <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+              <span
+                style="background: rgba(37, 99, 235, 0.1); color: var(--accent); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">Patent</span>
+              <span
+                style="background: rgba(37, 99, 235, 0.1); color: var(--accent); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">Robotics</span>
+              <span
+                style="background: rgba(37, 99, 235, 0.1); color: var(--accent); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">2024</span>
+            </div>
+            <p style="margin: 1rem 0 0 0; color: var(--text-muted); font-size: 0.85rem;">Patent Number: WO2024044221A2
+            </p>
+          </div>
+          <a href="https://patents.google.com/patent/WO2024044221A2" target="_blank"
+            style="color: var(--accent); font-size: 1.5rem; transition: all 0.3s ease;" title="View Patent">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -913,26 +961,50 @@
 
       <div class="pub-item">
         <div class="pub-content">
-          <div>Deep Learning based prediction of H3K27M mutation in midline gliomas</div>
-          <div class="pub-venue">ISMRM, Canada (2021)</div>
+          <div>Comprehensive genomic subtyping of glioma using semi-supervised multi-task deep learning on multimodal
+            MRI</div>
+          <div class="pub-venue">IEEE Access, Vol. 9, pp. 167900-167910 (2021)</div>
+        </div>
+        <a href="https://ieeexplore.ieee.org/abstract/document/9382018" target="_blank"
+          style="color:var(--text-muted)"><i class="fas fa-external-link-alt"></i></a>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-content">
+          <div>Pneumatic end-effector for precise seeding</div>
+          <div class="pub-venue">PICT's International Journal of Engineering and Technology, Vol. 1(1), pp. 01-08 (2023)
+          </div>
+        </div>
+        <a href="https://scholar.google.com/citations?user=Sq1FbgkAAAAJ" target="_blank"
+          style="color:var(--text-muted)"><i class="fas fa-external-link-alt"></i></a>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-content">
+          <div>Deep learning based prediction of H3K27M mutation in midline gliomas on multimodal MRI</div>
+          <div class="pub-venue">International Society for Magnetic Resonance in Medicine (ISMRM), Canada (2021)</div>
         </div>
         <span class="badge">Magna Cum Laude</span>
       </div>
 
       <div class="pub-item">
         <div class="pub-content">
-          <div>Comprehensive genomic subtyping of glioma using semi-supervised multi-task deep learning</div>
-          <div class="pub-venue">IEEE Access (2021)</div>
+          <div>Multi-Modal Transition of a Canine-like Quadruped to a Bipedal State</div>
+          <div class="pub-venue">Worcester Polytechnic Institute (2022)</div>
         </div>
-        <a href="#" style="color:var(--text-muted)"><i class="fas fa-external-link-alt"></i></a>
+        <a href="https://scholar.google.com/citations?user=Sq1FbgkAAAAJ" target="_blank"
+          style="color:var(--text-muted)"><i class="fas fa-external-link-alt"></i></a>
       </div>
 
-      <div class="pub-item">
-        <div class="pub-content">
-          <div>Pneumatic end-effector for precise seeding</div>
-          <div class="pub-venue">PIJET (2023)</div>
-        </div>
-        <a href="#" style="color:var(--text-muted)"><i class="fas fa-external-link-alt"></i></a>
+      <div
+        style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow);">
+        <p style="margin: 0 0 1rem 0; color: var(--text-muted); font-size: 0.95rem;">
+          For a complete list of publications, research work, and citations, visit my
+        </p>
+        <a href="https://scholar.google.com/citations?user=Sq1FbgkAAAAJ&hl=en" target="_blank"
+          style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent); font-weight: 600; text-decoration: underline;">
+          Google Scholar Profile <i class="fas fa-external-link-alt"></i>
+        </a>
       </div>
     </section>
 

@@ -117,6 +117,222 @@ Add new publications in the publications section:
 </div>
 ```
 
+### Adding Custom Sections
+
+The portfolio is flexible and supports custom sections. Follow these steps to add a new section:
+
+#### 1. Add Navigation Link
+
+Update the navigation bar in the `<nav>` section:
+
+```html
+<div class="nav-links">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Work</a>
+  <a href="#patents">Patents</a>
+  <a href="#publications">Research</a>
+  <a href="#awards">Awards</a>  <!-- New section -->
+</div>
+```
+
+#### 2. Create Section HTML
+
+Add your section in the `<main>` element with a unique `id` matching your navigation link:
+
+```html
+<section id="awards">
+  <h2 class="section-title">Awards & Recognition</h2>
+  
+  <div class="award-item" style="background: var(--bg-card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; box-shadow: var(--shadow);">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <h3 style="margin: 0 0 0.5rem 0; color: var(--text-main);">Award Name</h3>
+        <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Organization, Year</p>
+      </div>
+      <span style="background: rgba(37, 99, 235, 0.1); color: var(--accent); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Category</span>
+    </div>
+  </div>
+  
+</section>
+```
+
+#### 3. Style Considerations
+
+The portfolio uses CSS custom properties that automatically respond to light/dark mode:
+
+- `--bg-body`: Section background
+- `--bg-card`: Card/item background
+- `--text-main`: Primary text color
+- `--text-muted`: Secondary text color
+- `--accent`: Highlight/link color
+- `--border`: Border color
+- `--shadow`: Box shadow
+
+Use these variables for consistent styling:
+
+```html
+<div style="background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border); box-shadow: var(--shadow);">
+  Content here
+</div>
+```
+
+#### 4. Section Title Format
+
+All sections use the same title format for consistency:
+
+```html
+<h2 class="section-title">Section Name</h2>
+```
+
+This automatically includes:
+- Accent bar on the left
+- Horizontal line on the right
+- Consistent font size and spacing
+- Slide-in animation
+
+#### 5. Example: Adding a Testimonials Section
+
+```html
+<section id="testimonials">
+  <h2 class="section-title">Testimonials</h2>
+  
+  <div class="pub-item">
+    <div class="pub-content">
+      <div style="font-style: italic; margin-bottom: 0.5rem;">"Your quote here"</div>
+      <div style="font-weight: 600; color: var(--text-main);">Person Name</div>
+      <div class="pub-venue">Title/Company</div>
+    </div>
+  </div>
+  
+  <div class="pub-item">
+    <div class="pub-content">
+      <div style="font-style: italic; margin-bottom: 0.5rem;">"Another quote"</div>
+      <div style="font-weight: 600; color: var(--text-main);">Another Person</div>
+      <div class="pub-venue">Their Title/Company</div>
+    </div>
+  </div>
+  
+</section>
+```
+
+#### 6. Example: Adding a Timeline Section
+
+```html
+<section id="certifications">
+  <h2 class="section-title">Certifications</h2>
+  
+  <div class="timeline">
+    <div class="job-item">
+      <div class="job-header">
+        <span class="job-title">Certification Name</span>
+        <span class="job-company">@ Issuing Organization</span>
+        <span class="job-date">Month Year</span>
+      </div>
+      <div class="job-details">
+        <p style="margin: 0; color: var(--text-muted);">Brief description of the certification and what you learned.</p>
+      </div>
+    </div>
+  </div>
+  
+</section>
+```
+
+#### 7. Reusing Existing Components
+
+The portfolio provides several reusable component classes:
+
+**Items with Icons (like publications):**
+```html
+<div class="pub-item">
+  <div class="pub-content">
+    <div>Main Title</div>
+    <div class="pub-venue">Subtitle/Venue</div>
+  </div>
+  <span class="badge">Label</span>
+</div>
+```
+
+**Timeline Items (with left border and dot):**
+```html
+<div class="timeline">
+  <div class="job-item">
+    <div class="job-header">
+      <span class="job-title">Title</span>
+      <span class="job-company">@ Organization</span>
+      <span class="job-date">Date</span>
+    </div>
+    <div class="job-details">Content</div>
+  </div>
+</div>
+```
+
+**Skill/Tag Pills:**
+```html
+<span class="skill-pill">Tag Name</span>
+```
+
+#### 8. Adding Section-Specific Styles
+
+If you need custom styling for your new section, add CSS inside the `<style>` tag before the closing `</style>`:
+
+```css
+/* Custom section styling */
+.custom-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.custom-item:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.15);
+}
+```
+
+Then use in HTML:
+```html
+<div class="custom-item">Your content</div>
+```
+
+#### 9. Mobile Responsiveness
+
+The portfolio uses a breakpoint at 768px. Add mobile-specific styles:
+
+```css
+@media (max-width: 768px) {
+  .custom-section-grid {
+    grid-template-columns: 1fr;  /* Single column on mobile */
+  }
+}
+```
+
+#### 10. Common Inline Styles Reference
+
+For quick styling without adding CSS classes:
+
+```html
+<!-- Centered badge/tag -->
+<span style="background: rgba(37, 99, 235, 0.1); color: var(--accent); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500;">Tag</span>
+
+<!-- Subtle text -->
+<p style="color: var(--text-muted); font-size: 0.9rem;">Muted text</p>
+
+<!-- Card container -->
+<div style="background: var(--bg-card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow);">
+  Card content
+</div>
+
+<!-- Flexible header -->
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div>Left content</div>
+  <div>Right content</div>
+</div>
+```
+
 ## Styling & Themes
 
 ### Color Variables
