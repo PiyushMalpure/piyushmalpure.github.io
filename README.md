@@ -51,6 +51,12 @@ piyushmalpure.github.io/
             └── preview.{jpg|png|gif|mp4}
 ```
 
+### Profile Image
+
+- The site will attempt to load a profile image from `assets/profile.{jpg|jpeg|png|webp}` and display it as a circular avatar in the navigation bar. If no image is found, the site falls back to showing the initials.
+- Supported formats: **jpg, jpeg, png, webp**.
+- Recommended image: square (approx. 400×400 px), optimized for web (small file size).
+
 **Note**: Legacy folders (`css/`, `js/`, `images/`) have been removed to keep the project clean. All styles and scripts are now embedded in `index.html` for optimal performance.
 
 ## Customization

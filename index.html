@@ -93,10 +93,29 @@
     }
 
     .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
       font-weight: 700;
       font-size: 1.25rem;
       color: var(--text-main);
       letter-spacing: -0.5px;
+    }
+
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 1px solid var(--border);
+    }
+
+    .logo-initials {
+      display: none;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-main);
     }
 
     .nav-right {
@@ -712,7 +731,11 @@
 
   <nav>
     <div class="nav-container">
-      <a href="#" class="logo">PM.</a>
+      <a href="#" class="logo">
+        <img id="profile-img" class="logo-img" src="" alt="Piyush Malpure"
+          onerror="this.style.display='none'; document.getElementById('logo-initials').style.display='inline-block'">
+        <span id="logo-initials" class="logo-initials">PM.</span>
+      </a>
 
       <div class="nav-right">
         <div class="nav-links">
@@ -1078,6 +1101,34 @@
       // Switch Icon
       icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     });
+
+    // ===== PROFILE IMAGE LOADER =====
+    (function loadProfileImage() {
+      const img = document.getElementById('profile-img');
+      const initials = document.getElementById('logo-initials');
+      if (!img || !initials) return;
+
+      const extensions = ['jpg', 'jpeg', 'png', 'webp'];
+      (async () => {
+        for (const ext of extensions) {
+          try {
+            const url = `assets/profile.${ext}`;
+            const res = await fetch(url, { method: 'HEAD' });
+            if (res.ok) {
+              img.src = url;
+              img.style.display = 'block';
+              initials.style.display = 'none';
+              return;
+            }
+          } catch (e) {
+            // ignore and try next
+          }
+        }
+        // No image found — show initials fallback
+        img.style.display = 'none';
+        initials.style.display = 'inline-block';
+      })();
+    })();
 
     // ===== PROJECT MEDIA LOADER =====
     // Supported media file extensions
